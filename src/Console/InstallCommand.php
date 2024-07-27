@@ -22,7 +22,7 @@ use function Laravel\Prompts\select;
 #[AsCommand(name: 'breeze:install')]
 class InstallCommand extends Command implements PromptsForMissingInput
 {
-    use InstallsApiStack, InstallsBladeStack, InstallsInertiaStacks, InstallsLivewireStack;
+    use InstallsApiStack, InstallsBladeStack, InstallsInertiaStacks, InstallsLivewireStack, InstallsReactRouterStack;
 
     /**
      * The name and signature of the console command.
@@ -53,7 +53,9 @@ class InstallCommand extends Command implements PromptsForMissingInput
         if ($this->argument('stack') === 'vue') {
             return $this->installInertiaVueStack();
         } elseif ($this->argument('stack') === 'react') {
-            return $this->installInertiaReactStack();
+            return $this->installReactRouterStack();
+        } elseif ($this->argument('stack') === 'react-router') {
+            return $this->instaReact();
         } elseif ($this->argument('stack') === 'api') {
             return $this->installApiStack();
         } elseif ($this->argument('stack') === 'blade') {
