@@ -53,9 +53,9 @@ class InstallCommand extends Command implements PromptsForMissingInput
         if ($this->argument('stack') === 'vue') {
             return $this->installInertiaVueStack();
         } elseif ($this->argument('stack') === 'react') {
-            return $this->installReactRouterStack();
+            return $this->installInertiaReactStack();
         } elseif ($this->argument('stack') === 'react-router') {
-            return $this->instaReact();
+            return $this->installReactRouterStack();
         } elseif ($this->argument('stack') === 'api') {
             return $this->installApiStack();
         } elseif ($this->argument('stack') === 'blade') {
