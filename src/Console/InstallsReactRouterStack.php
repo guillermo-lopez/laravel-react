@@ -8,7 +8,7 @@ use Symfony\Component\Finder\Finder;
 trait InstallsReactRouterStack
 {
     /**
-     * Install the Inertia React Breeze stack.
+     * Install React with React Router.
      *
      * @return int|null
      */
@@ -78,7 +78,7 @@ trait InstallsReactRouterStack
 //            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-react-ts/resources/js/Pages', resource_path('js/Pages'));
 //            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-react-ts/resources/js/types', resource_path('js/types'));
         } else {
-            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Components', resource_path('js/Components'));
+//            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Components', resource_path('js/Components'));
             (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Layouts', resource_path('js/Layouts'));
             (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Pages', resource_path('js/Pages'));
             (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Routes', resource_path('js/Routes'));
@@ -128,7 +128,7 @@ trait InstallsReactRouterStack
 //            $this->replaceInFile('.vue', '.tsx', base_path('tailwind.config.js'));
         } else {
 //            copy(__DIR__.'/../../stubs/inertia-common/jsconfig.json', base_path('jsconfig.json'));
-            copy(__DIR__.'/../../stubs/inertia-react/resources/js/app.jsx', resource_path('js/app.jsx'));
+            copy(__DIR__.'/../../stubs/react-router/resources/js/app.jsx', resource_path('js/app.jsx'));
 
             $this->replaceInFile('.vue', '.jsx', base_path('tailwind.config.js'));
         }
