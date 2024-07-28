@@ -1,31 +1,15 @@
 import {
-    createBrowserRouter, Link,
+    createBrowserRouter,
 } from "react-router-dom";
+import Guest from "@/Layouts/GuestLayout.jsx";
 
 const routes = createBrowserRouter([
     {
-        element: <Layout />,
+        element: <Guest />,
         path: "/",
         children: [
             {
-                path: "jobs",
-                children: [
-                    {
-                        path: "",
-                        element: <Jobs/>,
-                        handle: { crumb: () => <Link to="jobs">Home</Link>},
-                    },
-                    {
-                        element: <Create/>,
-                        path: "create",
-                        handle: { crumb: () => <Link to="jobs">Home</Link>}
-                    },
-                    {
-                        path: ":jobId",
-                        element: <Job />,
-                        handle: { crumb: () => <Link to="jobs">Home</Link>}
-                    }
-                ],
+
             },
         ]
     }

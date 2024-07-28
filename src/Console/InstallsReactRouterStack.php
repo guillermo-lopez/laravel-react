@@ -30,7 +30,7 @@ trait InstallsReactRouterStack
                 'tailwindcss' => '^3.2.1',
                 'react' => '^18.2.0',
                 'react-dom' => '^18.2.0',
-                'react-router' => '6.25.1'
+                'react-router-dom' => '6.25.1'
             ] + $packages;
         });
 
@@ -78,7 +78,7 @@ trait InstallsReactRouterStack
 //            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-react-ts/resources/js/Pages', resource_path('js/Pages'));
 //            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/inertia-react-ts/resources/js/types', resource_path('js/types'));
         } else {
-//            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Components', resource_path('js/Components'));
+            (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Components', resource_path('js/Components'));
             (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Layouts', resource_path('js/Layouts'));
             (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Pages', resource_path('js/Pages'));
             (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/react-router/resources/js/Routes', resource_path('js/Routes'));
