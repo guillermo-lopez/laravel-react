@@ -355,6 +355,7 @@ class InstallCommand extends Command implements PromptsForMissingInput
                     'livewire' => 'Livewire (Volt Class API) with Alpine',
                     'livewire-functional' => 'Livewire (Volt Functional API) with Alpine',
                     'react' => 'React with Inertia',
+                    'react-router' => 'React with React Router',
                     'vue' => 'Vue with Inertia',
                     'api' => 'API only',
                 ],
